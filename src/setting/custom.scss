@@ -1,0 +1,242 @@
+/*
+ * Author: JackWei <wsm_1105@163.com>
+ * @LastEditors  : JackWei <wsm_1105@163.com>
+ * Date: 2020-05-30 15:20:06
+ * @LastEditTime : 2020-06-12 14:54:16
+ * Description: Define custom style for system level.
+ */
+
+div,
+span,
+li,
+ul,
+ol,
+i,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+em,
+button,
+input {
+	outline: none !important;
+}
+
+.layout-footer-fixed .wrapper .content-wrapper {
+	padding-bottom: calc(3.5rem + 1px);
+}
+
+.layout-navbar-fixed .wrapper .content-wrapper {
+	overflow: hidden !important;
+}
+
+@media (max-width: 991.98px) {
+	body:not(.sidebar-mini-md) .wrapper .content-header {
+		.container-fluid .mb-2 {
+			margin-bottom: 0 !important;
+		}
+	}
+	body:not(.sidebar-mini-md) .wrapper .content {
+		margin-top: 65px;
+	}
+}
+@media (max-width: 600px) {
+	body:not(.sidebar-mini-md) .wrapper .content-header .breadcrumb {
+		padding: 0 0;
+	}
+}
+
+.content {
+	width: 100%;
+	height: calc(100vh - 11rem - 5px);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin-top: 50px;
+	z-index: 0;
+}
+.content-wrapper {
+	position: relative;
+}
+
+.wrapper .content-header {
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	z-index: 999;
+	padding: 0 0.5rem;
+	box-shadow: 0 1px 16px rgba(212, 212, 212, 0.25), 0 1px 5px rgba(46, 45, 45, 0.22) !important;
+	.mb-2 {
+		margin-bottom: 0 !important;
+	}
+}
+.content-header .breadcrumb {
+	height: 100%;
+	vertical-align: middle;
+	padding: calc(1 / 2 * (34px - 20px)) 0;
+}
+
+.rotateBarIcon {
+	transition: 200ms;
+	transform: rotateZ(90deg);
+}
+
+// 表单错误时的提醒
+.input-error {
+	transform: translateY(-1.6rem);
+	padding: 5px 2px;
+	margin-bottom: -15px;
+	color: rgb(252, 23, 23);
+	font-size: 0.7rem;
+	user-select: none;
+	letter-spacing: 0.5px;
+	display: none;
+	position: absolute;
+}
+// 锁屏密码错误提示
+.lock-error {
+	transform: translateY(-30px);
+	padding: 5px 135px;
+	margin-bottom: -15px;
+	color: rgb(252, 23, 23);
+	font-size: 0.7rem;
+	user-select: none;
+	letter-spacing: 0.5px;
+	display: none;
+	position: absolute;
+	// text-align: center;
+}
+// 改变登录注册input布局
+.login-box .input-group,
+.register-box .input-group {
+	margin-bottom: 1.3rem !important;
+}
+
+// datatable
+div.dataTables_info {
+	padding: 0 0.4rem !important;
+	max-width: 200px;
+	float: left;
+	line-height: 38px;
+}
+@media screen and (max-width: 767px) {
+	.dataTables_paginate {
+		text-align: right !important;
+		ul.pagination {
+			justify-content: end !important;
+		}
+	}
+	div.dataTables_wrapper div.dataTables_info {
+		float: none;
+		display: block;
+		max-width: 100% !important;
+	}
+	.card.table {
+		padding: 0px !important;
+	}
+}
+.card.table {
+	padding: 5px 20px;
+}
+.table td,
+.table th {
+	vertical-align: middle;
+	text-align: center;
+}
+.page-item.disabled {
+	cursor: not-allowed !important;
+}
+// 操作列手势
+.table-opera{
+	cursor: pointer;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+
+// datatable头部下载用的dt-button
+button.dt-button,
+div.dt-button,
+a.dt-button {
+	color: #0056b3;
+	text-decoration: none;
+	background-color: #fff;
+	background-image: none;
+	transition: all 200ms;
+	border: 1px solid rgb(214, 214, 214);
+	padding: 0.3rem 0.75rem;
+	border-radius: 0.25rem;
+	&:hover {
+		color: #0056b3;
+		background-color: #f1f3f5 !important;
+		border-color: #dee2e6 !important;
+	}
+}
+
+// nprogress顶部进度条
+#nprogress .bar {
+	z-index: 9999999999;
+}
+#nprogress .spinner {
+	z-index: 9999999999;
+}
+
+// 卡片样式
+.card-body {
+	overflow-x: auto;
+}
+
+// 日历
+.datepicker {
+	width: 140px;
+	height: 36px;
+	border: 1px solid #dcdfe6;
+	color: #606266;
+	padding: 6px 8px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 0.9rem;
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+// 双日历选择
+.datepicker[type="double"] {
+	border: 1px solid #dcdfe6;
+	width: auto;
+	height: 100%;
+	display: inline-block;
+	padding: 6px 10px;
+	background-color: #fff;
+	color: #606266;
+	font-size: 0.9rem;
+	border-radius: 4px;
+
+	input {
+		max-width: 125px;
+		border: none;
+		text-align: center;
+		cursor: pointer;
+		overflow: hidden;
+		color: #606266;
+
+		&:focus .datepicker[type="double"],
+		&:active .datepicker[type="double"] {
+			border-color: #0056b3;
+		}
+	}
+	span {
+		padding: 0 2px;
+		background-color: #fff;
+		color: #606266;
+		cursor: default;
+	}
+}
+
+
+// bootstrap遮罩层
+.modal-backdrop{
+	z-index: -1;
+}

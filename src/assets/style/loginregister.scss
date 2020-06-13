@@ -1,0 +1,18 @@
+.login-box,
+.register-box {
+	margin-bottom: 100px;
+}
+
+form {
+	margin-bottom: 20px;
+}
+
+.authcode-input {
+	padding: 0 0;
+	.authcode {
+		width: 100%;
+		height: 100%;
+		background-color: aliceblue;
+		cursor: pointer;
+	}
+}
