@@ -2,26 +2,12 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>后台管理系统 | 用户注册</title>
-	<!-- Tell the browser to be responsive to screen width -->
-	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-	<link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
-	<link rel="stylesheet" href="/vendor/ionicons/css/ionicons.min.css">
-	<link rel="stylesheet" href="/vendor/adminlte/css/adminlte.min.css">
-	<!-- <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.css"> -->
-
-	<!-- plugin style -->
-	<link rel="stylesheet" href="/vendor/overlayscrollbars/OverlayScrollbars.min.css">
+	<!-- 必须的head -->
+	<%=htmlWebpackPlugin.options.head.baseHead %>
+	<!-- sweetalert插件 -->
 	<link rel="stylesheet" href="/vendor/sweetalert/sweetalert2.min.css">
-	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<!-- [if lt IE 9]>
-<script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-<![endif] -->
 <body class="hold-transition register-page">
 	<div class="register-box">
 		<div class="register-logo">
@@ -90,16 +76,12 @@
 		</div>
 	</div>
 
-	<!-- JS依赖 -->
-	<script src="/vendor/jquery/jquery.min.js"></script>
-	<script src="/vendor/popper/popper.min.js"></script>
-	<script src="/vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="/vendor/overlayscrollbars/jquery.overlayScrollbars.min.js"></script>
-	<script src="/vendor/adminlte/js/adminlte.min.js"></script>
+
+	<!-- 必须的script -->
+	<%=htmlWebpackPlugin.options.script.baseScript %>
 
 	<!-- plugin JS -->
 	<script src="/vendor/sweetalert/sweetalert2.min.js"></script>
-
 
 </body>
 

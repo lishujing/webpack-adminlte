@@ -2,7 +2,7 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-05-26 17:01:23
- * LastEditTime : 2020-06-05 14:53:51
+ * LastEditTime : 2020-06-13 17:21:48
  * Description  : 用户注册
  */
 
@@ -37,7 +37,7 @@ valid.submit(() => {
 				text: res.success,
 				icon: "success",
 				close: false
-			}).then(() => location.href = "/login.html")
+			}).then(() => location.href = "/admin/login")
 		} else {
 			refreshAuthCode()
 			valid.error({ id: "account", error: res.error })
