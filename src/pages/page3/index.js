@@ -2,7 +2,7 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-05-27 20:13:44
- * LastEditTime : 2020-06-10 19:23:25
+ * LastEditTime : 2020-06-15 11:03:00
  * Description  : Please_add_description
  */
 
@@ -25,7 +25,7 @@ tinymce.init({
 	plugins: "print save preview searchreplace autolink directionality visualblocks visualchars fullscreen image link media template code codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount imagetools textpattern help emoticons autosave bdmap indent2em autoresize lineheight formatpainter axupimgs",
 	toolbar: "code save undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
                      styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
-                     table media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs",
+                     image table media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs",
 	height: 650, //编辑器高度
 	min_height: 400,
 	/*content_css: [ //可设置编辑区内容展示的css，谨慎使用
@@ -68,9 +68,6 @@ tinymce.init({
 				})
 			})
 	},
-	image_list: [
-
-	],
 	image_class_list: [
 		{ title: "None", value: "" },
 		{ title: "Some class", value: "class-name" }
@@ -125,7 +122,39 @@ tinymce.init({
 		}
 
 		if (meta.filetype === "image") {
-			console.log("image")
+			const filetype = ".jpg, .jpeg, .png, .gif"
+			const uploadFile = document.createElement("input")
+			uploadFile.setAttribute("type", "file")
+			document.body.appendChild(uploadFile)
+			uploadFile.setAttribute("accept", filetype)
+			uploadFile.click()
+			uploadFile.onchange = function () {
+				const file = this.files[0]
+				var xhr, formData
+				xhr = new XMLHttpRequest()
+				xhr.withCredentials = false
+				xhr.open("POST", "/api/upload/file")
+				xhr.onload = function () {
+					var json
+					if (xhr.status != 200) {
+						failure("HTTP Error: " + xhr.status)
+						return
+					}
+					json = JSON.parse(xhr.responseText)
+					console.log(json)
+					if (!json || typeof json.location != "string") {
+						failure("Invalid JSON: " + xhr.responseText)
+						return
+					}
+					callback(json.location)
+					console.log(json)
+					window.tinymce.get("mytextarea").insertContent(`<img width='100%' src='${json.location}'>`)
+				}
+				formData = new FormData()
+				formData.append("file", file, file.name)
+				xhr.send(formData)
+			}
+			// window.tinymce.get("mytextarea").insertContent("<img width='100%' src='https://img.iplaysoft.com/wp-content/uploads/2019/free-images/free_stock_photo.jpg'>")
 		}
 		if (meta.filetype === "media") {
 			var filetype = ".mp3, .mp4"

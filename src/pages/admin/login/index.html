@@ -3,8 +3,9 @@
 
 <head>
 	<title>后台管理系统 | 用户登录</title>
-	<%=htmlWebpackPlugin.options.head.baseHead %>
+	<%= require('html-loader!@/layout/common/baseheader.html') %>
 </head>
+
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
@@ -71,7 +72,7 @@
 	</div>
 
 	<!-- 必须的script -->
-	<%=htmlWebpackPlugin.options.script.baseScript %>
+	<%= require('html-loader!@/layout/common/baseScript.html') %>
 
 </body>
 

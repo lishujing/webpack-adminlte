@@ -5,7 +5,7 @@
 	<title>后台管理系统 | 日历</title>
 
 	<!-- 基本head -->
-	<%=htmlWebpackPlugin.options.head.baseHead %>
+	<%= require('html-loader!@/layout/common/baseheader.html') %>
 	<!-- 日历 -->
 	<link rel="stylesheet" href="/vendor/jedate/jedate.css">
 
@@ -15,9 +15,9 @@
 	<div class="wrapper">
 
 		<!-- 顶部导航栏 -->
-		<%=htmlWebpackPlugin.options.layout.nav %>
+		<%= require('html-loader!@/layout/common/nav.html') %>
 		<!-- 侧边栏 -->
-		<%=htmlWebpackPlugin.options.layout.sidebar %>
+		<%= require('html-loader!@/layout/common/sidebar.html') %>
 
 		<!-- 内容区域容器 -->
 		<div class="content-wrapper">
@@ -60,10 +60,10 @@
 		</div>
 
 		<!-- 页脚 -->
-		<%=htmlWebpackPlugin.options.layout.footer  %>
+		<%= require('html-loader!@/layout/common/footer.html') %>
 
 		<!-- 必须的script -->
-		<%=htmlWebpackPlugin.options.script.baseScript %>
+		<%= require('html-loader!@/layout/common/baseScript.html') %>
 
 		<!-- plugins -->
 		<!-- 日历 -->

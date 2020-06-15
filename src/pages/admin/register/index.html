@@ -4,10 +4,11 @@
 <head>
 	<title>后台管理系统 | 用户注册</title>
 	<!-- 必须的head -->
-	<%=htmlWebpackPlugin.options.head.baseHead %>
+	<%= require('html-loader!@/layout/common/baseheader.html') %>
 	<!-- sweetalert插件 -->
 	<link rel="stylesheet" href="/vendor/sweetalert/sweetalert2.min.css">
 </head>
+
 <body class="hold-transition register-page">
 	<div class="register-box">
 		<div class="register-logo">
@@ -78,7 +79,7 @@
 
 
 	<!-- 必须的script -->
-	<%=htmlWebpackPlugin.options.script.baseScript %>
+	<%= require('html-loader!@/layout/common/baseScript.html') %>
 
 	<!-- plugin JS -->
 	<script src="/vendor/sweetalert/sweetalert2.min.js"></script>

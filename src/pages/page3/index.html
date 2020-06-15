@@ -3,16 +3,16 @@
 
 <head>
 	<title>后台管理系统 | 富文本</title>
-	<%=htmlWebpackPlugin.options.head.baseHead %>
+	<%= require('html-loader!@/layout/common/baseheader.html') %>
 
 </head>
 
 <body class="control-sidebar-slide sidebar-mini hold-transition layout-fixed layout-navbar-fixed layout-footer-fixed">
 	<div class="wrapper">
 		<!-- 顶部导航栏 -->
-		<%=htmlWebpackPlugin.options.layout.nav %>
+		<%= require('html-loader!@/layout/common/nav.html') %>
 		<!-- 侧边栏 -->
-		<%=htmlWebpackPlugin.options.layout.sidebar %>
+		<%= require('html-loader!@/layout/common/sidebar.html') %>
 
 		<!-- 内容区域容器 -->
 		<div class="content-wrapper">
@@ -47,13 +47,13 @@
 		</div>
 
 		<!-- 页脚 -->
-		<%=htmlWebpackPlugin.options.layout.footer  %>
+		<%= require('html-loader!@/layout/common/footer.html') %>
 
 		<!-- 必须的script -->
-		<%=htmlWebpackPlugin.options.script.baseScript %>
+		<%= require('html-loader!@/layout/common/baseScript.html') %>
 		<!-- plugins -->
 		<!-- tinymce -->
-		<%=htmlWebpackPlugin.options.script.tinymceScript %>
+		<%= require('html-loader!@/layout/pluginScript/tinymceScript.html') %>
 
 </body>
 

@@ -3,7 +3,7 @@
 
 <head>
 	<title>后台管理系统 | 找回密码</title>
-	<%=htmlWebpackPlugin.options.head.baseHead %>
+	<%= require('html-loader!@/layout/common/baseheader.html') %>
 </head>
 
 <body class="hold-transition login-page">
@@ -44,7 +44,7 @@
 
 
 	<!-- 必须的script -->
-	<%=htmlWebpackPlugin.options.script.baseScript %>
+	<%= require('html-loader!@/layout/common/baseScript.html') %>
 
 </body>
 

@@ -9,9 +9,13 @@
 import menuAction from "@/api/menuAction"
 
 const role = JSON.parse(localStorage.getItem("userInfo")).role
-menuAction.menuList({role})
-	.then(res => {
-		$(".mt-2").html(res.success)
-	})
+try {
+	menuAction.menuList({ role })
+		.then(res => {
+			$(".mt-2").html(res.success)
+		})
+} catch (error) {
+
+}
 
 

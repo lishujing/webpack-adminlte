@@ -238,7 +238,7 @@
       }
     };
     var set = function (element, key, value) {
-      rawSet(element.dom(), key, value);
+			rawSet(element.dom(), key, value);
     };
     var remove = function (element, key) {
       element.dom().removeAttribute(key);
@@ -349,7 +349,7 @@
         var done = function (dimensions) {
           if (img.parentNode) {
 						img.parentNode.removeChild(img);
-          }
+					}
           callback(dimensions);
 				};
 				
@@ -420,7 +420,7 @@
       return css;
     };
     var createImageList = function (editor, callback) {
-      var imageList = getImageList(editor);
+			var imageList = getImageList(editor);
       if (typeof imageList === 'string') {
         global$3.send({
           url: imageList,
@@ -431,7 +431,7 @@
       } else if (typeof imageList === 'function') {
         imageList(callback);
       } else {
-        callback(imageList);
+				callback(imageList);
       }
     };
     var waitLoadImage = function (editor, data, imgElm) {
@@ -611,7 +611,7 @@
       };
     };
     var getStyleValue = function (normalizeCss, data) {
-      var image = domGlobals.document.createElement('img');
+			var image = domGlobals.document.createElement('img');
       updateAttrib(image, 'style', data.style);
       if (getHspace(image) || data.hspace !== '') {
         setHspace(image, data.hspace);
@@ -629,7 +629,6 @@
     };
     var create = function (normalizeCss, data) {
 			var image = domGlobals.document.createElement('img');
-			
       write(normalizeCss, __assign(__assign({}, data), { caption: false }), image);
       setAlt(image, data.alt, data.isDecorative);
       if (data.caption) {

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>后台管理系统 | 表格example</title>
-	<%=htmlWebpackPlugin.options.head.baseHead %>
+	<%= require('html-loader!@/layout/common/baseheader.html') %>
 	<!-- datatable -->
-	<%=htmlWebpackPlugin.options.head.tableHead %>
+	<%= require('html-loader!@/layout/pluginHead/tableHead.html') %>
 </head>
 
 <body class="control-sidebar-slide sidebar-mini hold-transition layout-fixed layout-navbar-fixed layout-footer-fixed">
 	<div class="wrapper">
 		<!-- 顶部导航栏 -->
-		<%=htmlWebpackPlugin.options.layout.nav %>
+		<%= require('html-loader!@/layout/common/nav.html') %>
 		<!-- 侧边栏 -->
-		<%=htmlWebpackPlugin.options.layout.sidebar %>
+		<%= require('html-loader!@/layout/common/sidebar.html') %>
 
 		<!-- 内容区域容器 -->
 		<div class="content-wrapper">
@@ -478,12 +479,12 @@
 		</div>
 
 		<!-- 页脚 -->
-		<%=htmlWebpackPlugin.options.layout.footer  %>
+		<%= require('html-loader!@/layout/common/footer.html') %>
 
 		<!-- 必须的script -->
-		<%=htmlWebpackPlugin.options.script.baseScript %>
+		<%= require('html-loader!@/layout/common/baseScript.html') %>
 		<!-- dataTable插件 -->
-		<%=htmlWebpackPlugin.options.script.tableScript %>
+		<%= require('html-loader!@/layout/pluginScript/tableScript.html') %>
 </body>
 
 </html>

@@ -12,7 +12,6 @@ const webpack = require("webpack")
 const htmlWebpackPlugin = require("html-webpack-plugin")
 const moment = require("moment")
 const npmPackage = require("../package.json")
-const HTMLPart = require("../src/setting/commonhtml")
 
 
 // configure Copyright Information
@@ -77,9 +76,6 @@ function getEntry(entryPath) {
 				filename: entryName == "index" ? "index.html" : (entryName + "/index.html"),
 				hash: false,
 				title: "",
-				head: HTMLPart.head,   // 公共的头部HTML片段
-				script: HTMLPart.script,  // 公共的JS依赖HTML片段
-				layout: HTMLPart.layout,  // 公共的布局HTML片段
 				chunks: [entryName, "common"],
 				inject: true,
 				cache: true,
