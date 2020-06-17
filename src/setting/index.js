@@ -2,7 +2,7 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-05-26 15:53:29
- * LastEditTime : 2020-06-13 14:16:30
+ * LastEditTime : 2020-06-17 19:46:51
  * Description  : adminlte config
  */
 
@@ -16,6 +16,7 @@ import "@/setting/sidebar"  // control sidebar
 import "@/setting/globalEven"  // 全局事件
 import lockscreen from "@/util/lockscreen"
 import "@/setting/custom.scss"  // custom style(system level)
+import "@/setting/breadcrumb"
 
 // 设置返回顶部button
 new BackTop({

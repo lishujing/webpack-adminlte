@@ -2,7 +2,7 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-04-29 15:07:34
- * LastEditTime : 2020-06-13 14:27:21
+ * LastEditTime : 2020-06-17 20:12:37
  * Description  : configure mock routes
  */
 
@@ -255,19 +255,19 @@ data-accordion="false">
 	</a>
 	<ul class="nav nav-treeview">
 		<li class="nav-item">
-			<a href="/page1" class="nav-link">
+			<a href="/admin/dashboard/table" class="nav-link">
 				<i class="far fa-circle nav-icon"></i>
 				<p>表格</p>
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="/page2" class="nav-link">
+			<a href="/admin/dashboard/date" class="nav-link">
 				<i class="far fa-circle nav-icon"></i>
 				<p>日历</p>
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="/page3" class="nav-link">
+			<a href="/admin/dashboard/tinymce" class="nav-link">
 				<i class="far fa-circle nav-icon"></i>
 				<p>富文本编辑</p>
 			</a>
@@ -330,19 +330,19 @@ data-accordion="false">
 	</a>
 	<ul class="nav nav-treeview">
 		<li class="nav-item">
-			<a href="/page1" class="nav-link">
+			<a href="/admin/dashboard/table" class="nav-link">
 				<i class="far fa-circle nav-icon"></i>
-				<p>page1</p>
+				<p>表格</p>
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="/page2" class="nav-link">
+			<a href="/admin/dashboard/date" class="nav-link">
 				<i class="far fa-circle nav-icon"></i>
-				<p>page2</p>
+				<p>日历</p>
 			</a>
 		</li>
 		<li class="nav-item">
-			<a href="/page3" class="nav-link">
+			<a href="/admin/dashboard/tinymce" class="nav-link">
 				<i class="far fa-circle nav-icon"></i>
 				<p>富文本编辑</p>
 			</a>

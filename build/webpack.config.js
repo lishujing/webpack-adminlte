@@ -2,7 +2,7 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-04-29 10:06:24
- * LastEditTime : 2020-06-13 17:14:57
+ * LastEditTime : 2020-06-17 20:10:08
  * Description  : webpack utils
  */ 
 
@@ -31,7 +31,7 @@ const PORT = process.env.port || process.env.npm_config_port || 9696
 
 // add webpack vendor library to change your project volumn
 const VendorLibrary = {
-	chart: ["chart.js"],
+	// chart: ["chart.js"],
 	// vue: ['vue', 'vuex', 'vue-router'],  // add some bootstrap library in project.
 	// bootstrap: ['bootstrap'],  // you can add orther library for using.
 	// jQuery: ['jquery'],

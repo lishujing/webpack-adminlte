@@ -2,7 +2,7 @@
  * Author: JackWei <wsm_1105@163.com>
  * @LastEditors  : JackWei <wsm_1105@163.com>
  * Date: 2020-05-30 15:20:06
- * @LastEditTime : 2020-06-12 14:54:16
+ * @LastEditTime : 2020-06-17 19:21:09
  * Description: Define custom style for system level.
  */
 
@@ -46,6 +46,9 @@ input {
 	body:not(.sidebar-mini-md) .wrapper .content-header .breadcrumb {
 		padding: 0 0;
 	}
+	.wrapper .content-header h1{
+		line-height: 1.2 !important;
+	}
 }
 
 .content {
@@ -60,22 +63,7 @@ input {
 	position: relative;
 }
 
-.wrapper .content-header {
-	position: absolute;
-	width: 100%;
-	top: 0px;
-	z-index: 999;
-	padding: 0 0.5rem;
-	box-shadow: 0 1px 16px rgba(212, 212, 212, 0.25), 0 1px 5px rgba(46, 45, 45, 0.22) !important;
-	.mb-2 {
-		margin-bottom: 0 !important;
-	}
-}
-.content-header .breadcrumb {
-	height: 100%;
-	vertical-align: middle;
-	padding: calc(1 / 2 * (34px - 20px)) 0;
-}
+
 
 .rotateBarIcon {
 	transition: 200ms;
@@ -239,4 +227,38 @@ a.dt-button {
 // bootstrap遮罩层
 .modal-backdrop{
 	z-index: -1;
+}
+
+// 面包屑
+.wrapper .content-header {
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	z-index: 999;
+	padding: 0 0.5rem;
+	box-shadow: 0 1px 16px rgba(212, 212, 212, 0.25), 0 1px 5px rgba(46, 45, 45, 0.22) !important;
+	.mb-2 {
+		margin-bottom: 0 !important;
+	}
+}
+.content-header .breadcrumb {
+	height: 100%;
+	vertical-align: middle;
+	padding: calc(1 / 2 * (34px - 20px)) 0;
+}
+.wrapper .content-header .container-fluid{
+	animation: showbread 300ms;
+}
+.wrapper .content-header h1{
+	line-height: 1.5;
+}
+@keyframes showbread {
+	from{
+		position: absolute;
+		left: 80%;
+	}
+	to{
+		left: 0;
+		position: relative;
+	}
 }

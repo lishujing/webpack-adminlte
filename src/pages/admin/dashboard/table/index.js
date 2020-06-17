@@ -2,12 +2,12 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-05-20 16:07:04
- * LastEditTime : 2020-06-15 09:24:10
+ * LastEditTime : 2020-06-17 20:06:34
  * Description  : Please_add_description
  */
 
 import "@/config/isLogin"
-import "@/setting/index"
+import "@/setting"
 import "@/util/getMenu"
 import tableAction from "@/api/datatableAction"
 import dataTable from "@/util/datatable"
