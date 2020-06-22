@@ -2,8 +2,8 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-06-16 16:30:30
- * LastEditTime : 2020-06-17 20:16:09
- * Description  : routes
+ * LastEditTime : 2020-06-18 10:22:52
+ * Description  : 系统路由(二级路径不能以"/"开头，每个路由的最后一项"isLink===false")
  */
 
 // 系统路由对应pages

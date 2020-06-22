@@ -2,7 +2,7 @@
  * Author: JackWei <wsm_1105@163.com>
  * @LastEditors  : JackWei <wsm_1105@163.com>
  * Date: 2020-05-30 15:20:06
- * @LastEditTime : 2020-06-17 19:21:09
+ * @LastEditTime : 2020-06-22 11:03:19
  * Description: Define custom style for system level.
  */
 
@@ -253,12 +253,19 @@ a.dt-button {
 	line-height: 1.5;
 }
 @keyframes showbread {
-	from{
+	10%{
 		position: absolute;
-		left: 80%;
+		left: 30%;
+		opacity: 0;
 	}
-	to{
+	80%{
+		position: absolute;
+		opacity: .7;
+		left: -5%;
+	}
+	100%{
 		left: 0;
 		position: relative;
+		opacity: 1;
 	}
 }

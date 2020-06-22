@@ -2,7 +2,7 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-04-29 10:07:41
- * LastEditTime : 2020-06-13 13:53:56
+ * LastEditTime : 2020-06-22 11:01:42
  * Description  : webpack common config
  */ 
 
@@ -24,7 +24,8 @@ module.exports = {
 	},
 	externals: {
 		jquery: "jQuery",
-		popper: "popper.js"
+		"popper.js": "popper.js",
+		"chart.js": "Chart"
 	},
 	module: {
 		noParse: /jQuery/,
