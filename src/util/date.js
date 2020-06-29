@@ -2,7 +2,7 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-06-09 14:30:01
- * LastEditTime : 2020-06-11 09:26:18
+ * LastEditTime : 2020-06-29 15:25:34
  * Description  : Date library
  */
 
@@ -26,7 +26,7 @@ class Config extends CopyRight {
 	CONFIG = {
 		name: "en",
 		theme: {
-			bgcolor: "#00A680", pnColor: "#ddd", color: "#fff"
+			bgcolor: "#007BFF", pnColor: "#ddd", color: "#fff"
 		},
 		minDate: "1900-01-01 00:00:00",
 		maxDate: "2200-12-31 23:59:59",
@@ -39,7 +39,7 @@ class Config extends CopyRight {
 		// valiDate: [],
 		// isinitVal: false,
 		isToday: true,								//是否显示今天
-		festival: true,    						//是否显示节日和农历日历
+		festival: false,    						//是否显示节日和农历日历
 		fixed: true,									//是否静止定位，为true时定位在输入框，为false时居中定位
 		//zIndex: 99999, 								//弹出层的层级高度
 		//marks: null,                  //给日期做标注

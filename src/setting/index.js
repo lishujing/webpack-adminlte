@@ -2,7 +2,7 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-05-26 15:53:29
- * LastEditTime : 2020-06-17 19:46:51
+ * LastEditTime : 2020-06-29 15:26:27
  * Description  : adminlte config
  */
 
@@ -30,7 +30,6 @@ new BackTop({
 	hidden: 200,
 	right: "20px"
 })
-
 
 // 设置内容区域滚动条
 $(function () {

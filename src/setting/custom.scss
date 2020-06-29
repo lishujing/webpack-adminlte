@@ -2,7 +2,7 @@
  * Author: JackWei <wsm_1105@163.com>
  * @LastEditors  : JackWei <wsm_1105@163.com>
  * Date: 2020-05-30 15:20:06
- * @LastEditTime : 2020-06-22 11:03:19
+ * @LastEditTime : 2020-06-28 13:54:00
  * Description: Define custom style for system level.
  */
 
@@ -22,6 +22,7 @@ em,
 button,
 input {
 	outline: none !important;
+	// transition: background-color 100ms;
 }
 
 .layout-footer-fixed .wrapper .content-wrapper {

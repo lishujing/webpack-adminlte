@@ -2,7 +2,7 @@
  * Author       : JackWei <wsm_1105@163.com>
  * LastEditors  : JackWei <wsm_1105@163.com>
  * Date         : 2020-04-29 15:07:34
- * LastEditTime : 2020-06-17 20:12:37
+ * LastEditTime : 2020-06-28 13:34:00
  * Description  : configure mock routes
  */
 
@@ -246,7 +246,7 @@ data-accordion="false">
 	</a>
 </li>
 <li class="nav-item has-treeview">
-	<a href="#" class="nav-link">
+	<a href="javascript:;" class="nav-link">
 		<i class="nav-icon fas fa-tachometer-alt"></i>
 		<p>
 			仪表盘
@@ -321,7 +321,7 @@ data-accordion="false">
 	</a>
 </li>
 <li class="nav-item has-treeview">
-	<a href="#" class="nav-link">
+	<a href="javascript:;" class="nav-link">
 		<i class="nav-icon fas fa-tachometer-alt"></i>
 		<p>
 			Dashboard
