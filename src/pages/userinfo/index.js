@@ -1,12 +1,11 @@
 /*
  * Author       : JackWei <wsm_1105@163.com>
- * LastEditors  : JackWei <wsm_1105@163.com>
+ * LastEditors  : Please set LastEditors
  * Date         : 2020-05-18 17:08:32
- * LastEditTime : 2020-06-10 18:45:16
+ * LastEditTime : 2020-07-31 10:02:05
  * Description  : userinfo
  */ 
 
-import "@/config/isLogin"
 import "@/setting/index"
 import "@/util/getMenu"
 

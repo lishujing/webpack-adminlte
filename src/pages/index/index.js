@@ -1,12 +1,11 @@
 /*
  * Author       : JackWei <wsm_1105@163.com>
- * LastEditors  : JackWei <wsm_1105@163.com>
+ * LastEditors  : Please set LastEditors
  * Date         : 2020-04-29 11:22:30
- * LastEditTime : 2020-06-15 13:11:37
+ * LastEditTime : 2020-07-31 10:02:14
  * Description  : Please_add_description
  */ 
 
-import "@/config/isLogin"
 import "@/util/getMenu"
 import "@/setting/index"
 import Chart from "chart.js"

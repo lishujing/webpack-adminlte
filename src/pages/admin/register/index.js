@@ -6,7 +6,6 @@
  * Description  : 用户注册
  */
 
-import "@/config/isLogin"
 import "@/setting/index"
 import "@/assets/style/loginregister.scss"
 import authorizeAPI from "@/api/authAction"

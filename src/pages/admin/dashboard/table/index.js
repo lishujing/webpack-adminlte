@@ -6,7 +6,6 @@
  * Description  : Please_add_description
  */
 
-import "@/config/isLogin"
 import "@/setting"
 import "@/util/getMenu"
 import tableAction from "@/api/datatableAction"

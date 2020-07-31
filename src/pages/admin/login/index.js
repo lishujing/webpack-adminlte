@@ -1,12 +1,11 @@
 /*
  * Author       : JackWei <wsm_1105@163.com>
- * LastEditors  : JackWei <wsm_1105@163.com>
+ * LastEditors  : Please set LastEditors
  * Date         : 2020-05-18 17:08:32
- * LastEditTime : 2020-06-05 14:56:47
+ * LastEditTime : 2020-07-31 10:02:36
  * Description  : Please_add_description
  */
 
-import "@/config/isLogin"
 import "@/setting/index"
 import "@/assets/style/loginregister.scss"
 import authorizeAPI from "@/api/authAction"

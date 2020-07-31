@@ -136,7 +136,7 @@ const prodConfig = {
 			minChunks: 2,   // 某个模块被引用一次就做代码分割(否则打包进去)
 			maxAsyncRequests: 5,
 			maxInitialRequests: 3,
-			automaticNameDelimiter: "~",
+			automaticNameDelimiter: "chunk~",
 			name: false,   // chunkName 是否添加文件名，添加了感觉名字太长了
 			cacheGroups: {
 				vender: {
