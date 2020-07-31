@@ -1,8 +1,8 @@
 /*
  * Author       : JackWei <wsm_1105@163.com>
- * LastEditors  : JackWei <wsm_1105@163.com>
+ * LastEditors  : Please set LastEditors
  * Date         : 2020-04-29 15:07:55
- * LastEditTime : 2020-05-31 11:10:18
+ * LastEditTime : 2020-07-31 10:37:59
  * Description  : config cross-domain
  */ 
 
@@ -14,7 +14,7 @@ module.exports = app => {
 		res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS")
 
 		if (req.method == "OPTIONS") {
-			res.sendStatus(200) // 让options请求快速返回
+			res.sendStatus(200)
 		}
 		else {
 			next()

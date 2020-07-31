@@ -1,15 +1,15 @@
 /*
  * Author       : JackWei <wsm_1105@163.com>
- * LastEditors  : JackWei <wsm_1105@163.com>
+ * LastEditors  : Please set LastEditors
  * Date         : 2020-04-29 15:07:34
- * LastEditTime : 2020-06-28 13:34:00
+ * LastEditTime : 2020-07-31 10:40:37
  * Description  : configure mock routes
  */
 
 const router = require("express").Router()
-const uploadImg = require("./util/uploadimg")
-const uploadFile = require("./util/uploadFile")
-const uploadVideo = require("./util/uploadVideo")
+const uploadImg = require("../util/uploadimg")
+const uploadFile = require("../util/uploadFile")
+const uploadVideo = require("../util/uploadVideo")
 const Mock = require("mockjs")
 const userList = [
 	{
