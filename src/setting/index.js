@@ -11,10 +11,10 @@ import NProgress from "nprogress"
 import "nprogress/nprogress.css"
 import "@/setting/themeToggle"  // toggle theme
 import "@/setting/activeLink"   // tag sidebar link
-import "@/setting/fullscreen"   // fullscreen
+import fullscreen from "@/setting/fullscreen"   // fullscreen
 import "@/setting/sidebar"  // control sidebar
-import "@/setting/custom.scss"  // custom style(system level)
-import "@/setting/breadcrumb"
+import "@/style/custom.scss"  // custom style(system level)
+import breadcrumb from "./breadcrumb"
 import { logout, loadingEnd } from "@/setting/globalEven"  // 全局事件
 
 // 设置返回顶部button
@@ -42,6 +42,14 @@ $(function () {
 
 // 顶部进度条
 NProgress.start()
+
+// 面包屑
+breadcrumb()
+
+// 全屏
+fullscreen()
+
+
 window.onload = () => {
 	NProgress.done()
 

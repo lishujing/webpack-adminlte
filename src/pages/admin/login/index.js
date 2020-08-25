@@ -12,6 +12,7 @@ import authorizeAPI from "@/api/authAction"
 import { getAuthCodeCookie, refreshAuthCode } from "@/util/authcode"
 import Notice from "@/components/message/message"
 import Validate from "@/config/validateinput"
+import { redirectPath } from "@/util/utils"
 
 const valid = new Validate([
 	{ id: "account", error: "账号不能为空" },
@@ -31,16 +32,11 @@ valid.submit(() => {
 	}
 	authorizeAPI.login({ account: valid.data.account, password: valid.data.password }).then(res => {
 		if (res.code == 200) {
-			Notice.toast({
-				icon: "success",
-				heading: "消息提示",
-				text: res.success,
-				close: false
-			}).then(() => {
+			Notice.success(res.success).then(() => {
 				localStorage.setItem("userInfo", JSON.stringify(res.data))
 				localStorage.setItem("isLogin", true)
 				localStorage.lockscreen = false
-				location.href = "/"
+				location.href = redirectPath()
 			})
 
 		} else {
@@ -49,12 +45,7 @@ valid.submit(() => {
 				{ id: "account", error: res.error },
 				{ id: "password", error: res.error },
 			])
-			Notice.toast({
-				icon: "error",
-				heading: "错误提示",
-				text: res.error,
-				duration: false
-			})
+			Notice.error(res.error)
 		}
 	}).catch(error => console.log(error))
 	return false

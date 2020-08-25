@@ -8,37 +8,42 @@
 
 import routes from "@/route"
 
-const pageTitle = $("#page-title")
-const breadcrumbContent = $("#breadcrumb-content")
-let path = location.pathname
+export default function breadcrumb() {
+	const pageTitle = $("#page-title")
+	const breadcrumbContent = $("#breadcrumb-content")
+	let path = location.pathname
 
-const lastSprit = path.lastIndexOf("/")
-if (lastSprit != 0 && lastSprit >= path.length - 1) {
-	path = path.slice(0, lastSprit)
-}
+	const lastSprit = path.lastIndexOf("/")
+	if (lastSprit != 0 && lastSprit >= path.length - 1) {
+		path = path.slice(0, lastSprit)
+	}
 
-let strContent = ""
+	let strContent = ""
 
-const app = routes.filter(item => item.path == path).length ? routes.filter(item => item.path == path)[0] : null
+	const app = routes.filter(item => item.path == path).length ? routes.filter(item => item.path == path)[0] : null
 
-if (app) {
-	pageTitle.text(app.children[app.children.length - 1].name)
-	app.children.forEach((item, index) => {
-		if(!item.name.length) return
-		if (item.isLink) {
-			let path = ""
-			for (let i = 0; i <= index; i++) {
-				path += app.children[i].path
-			}
-			if (app.children.length == index + 1) {
-				strContent += `<li class='breadcrumb-item'>${item.name}</li>`
+	if (app) {
+		pageTitle.html(app.children[app.children.length - 1].title)
+		app.children.forEach((item, index) => {
+			if (!item.name.length) return
+			if (item.isLink) {
+				let path = ""
+				for (let i = 0; i <= index; i++) {
+					path += app.children[i].path
+				}
+				if (app.children.length == index + 1) {
+					strContent += `<li class='breadcrumb-item'><span><i class="fas ${item.icon}"></i>${item.name}</span></li>`
+				} else {
+					strContent += `<li class='breadcrumb-item'><a href='${path}'><i class="fas ${item.icon}"></i>${item.name}</a></li>`
+				}
 			} else {
-				strContent += `<li class='breadcrumb-item'><a href='${path}'>${item.name}</a></li>`
+				strContent += `<li class='breadcrumb-item ban-cursor'><span><i class="fas ${item.icon}"></i>${item.name}</span></li>`
 			}
-		} else {
-			strContent += `<li class='breadcrumb-item'>${item.name}</li>`
-		}
-	})
-	breadcrumbContent.html(strContent)
+		})
+		breadcrumbContent.html(strContent)
+	}
+
 }
+
+
 

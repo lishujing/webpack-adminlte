@@ -12,6 +12,8 @@ const routes = [
 		path: "/",
 		isLink: true,
 		name: "后台首页",
+		title: "首页数据",
+		icon: "fa-home",
 		children: [
 			{
 				path: "admin",
@@ -21,21 +23,28 @@ const routes = [
 						path: "/dashboard",
 						isLink: false,
 						name: "仪表盘",
+						icon: "fa-tachometer-alt",
 						children: [
 							{
 								path: "/table",
-								isLink: false,
-								name: "表格示例",
+								isLink: true,
+								name: "表格",
+								icon: "fa-table",
+								title: "表格示例",
 							},
 							{
 								path: "/date",
-								isLink: false,
-								name: "日期组件",
+								isLink: true,
+								name: "日期",
+								icon: "fa-clock",
+								title: "日期组件",
 							},
 							{
 								path: "/tinymce",
-								isLink: false,
-								name: "富文本示例",
+								isLink: true,
+								name: "富文本",
+								icon: "fa-file",
+								title: "富文本示例",
 							},
 						]
 					},
@@ -43,8 +52,10 @@ const routes = [
 			},
 			{
 				path: "userinfo",
-				isLink: false,
-				name: "用户信息",
+				isLink: true,
+				name: "会员",
+				icon: "fa-crown",
+				title: "会员信息",
 			}
 		]
 	}
@@ -70,7 +81,9 @@ function perfectRoute(obj, routes) {
 				children: ok.children.push({
 					name: item.name || "",
 					path: item.path,
-					isLink: item.isLink
+					title: item.title || "",
+					isLink: item.isLink,
+					icon: item.icon
 				}) && ok.children
 			}
 			// 是路径添加进去
@@ -85,7 +98,9 @@ function perfectRoute(obj, routes) {
 			ok.children.push({
 				name: item.name,
 				path: item.path,
-				isLink: item.isLink
+				title: item.title || "",
+				isLink: item.isLink,
+				icon: item.icon
 			})
 			arr.push(ok)
 		}

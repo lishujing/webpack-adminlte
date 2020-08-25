@@ -6,10 +6,13 @@
  * Description  : 全局公共的事件
  */ 
 
+import { currPath } from "../util/utils"
+
+
 //  退出
 export function logout() {
 	$("#logout").on("click", e => {
-		location.href = "/admin/login"
+		location.href = "/admin/login?" + currPath()
 	})
 }
 

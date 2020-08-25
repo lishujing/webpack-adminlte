@@ -1,0 +1,163 @@
+@import "./variable.scss";
+
+
+@function rem($px){
+	@return $px / 16 * 1rem;
+}
+
+
+.layout-footer-fixed .wrapper .content-wrapper {
+	padding-bottom: calc(2.5rem + 1px);
+}
+
+.layout-navbar-fixed .wrapper .content-wrapper {
+	overflow: hidden !important;
+}
+
+@media (max-width: 991.98px) {
+	body:not(.sidebar-mini-md) .wrapper .content-header {
+		.container-fluid .mb-2 {
+			margin-bottom: 0 !important;
+		}
+	}
+	body:not(.sidebar-mini-md) .wrapper .content {
+		margin-top: 65px;
+	}
+}
+@media (max-width: 600px) {
+	body:not(.sidebar-mini-md) .wrapper .content-header .breadcrumb {
+		padding: 0 0;
+	}
+	.wrapper .content-header h1 {
+		line-height: 1.2 !important;
+	}
+}
+
+
+
+/*
+ *	顶部导航栏
+ */
+.navbar{
+	padding: 1rem;
+	// box-shadow: 0 1px 5px rgba(216, 214, 214, 0.5);
+	border-bottom: none;
+} 
+
+
+
+/*
+ *	身体区域
+ */
+ .layout-footer-fixed .wrapper .content-wrapper{
+	 background: #f8f8f8;
+ }
+.content {
+	width: 100%;
+	height: calc(100vh - 11rem - 5px);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin-top: 58px;
+	z-index: 0;
+	background: #f8f8f8;
+}
+.layout-footer-fixed .wrapper .content-wrapper {
+	position: relative;
+	margin-top: calc(4.5rem + 1px);
+}
+
+.rotateBarIcon {
+	transition: 200ms;
+	transform: rotateZ(90deg);
+}
+
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl{
+	padding-right: 14px;
+	padding-left: 14px;
+}
+// 面包屑
+.wrapper .content-header {
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	z-index: 999;
+	padding: 0.5rem;
+	background-color: #f8f8f8;
+	.mb-2 {
+		margin-bottom: 0 !important;
+	}
+	.breadcrumb-item {
+		color: #333;
+		span{
+			font-size: rem(18);
+		}
+		a{
+			font-size: rem(18);
+		}
+
+		&.ban-cursor{
+			span{
+				color: #999;
+			}
+		}
+	}
+}
+.content-header .breadcrumb {
+	height: 100%;
+	vertical-align: middle;
+	padding: calc(1 / 2 * (34px - 20px)) 0;
+}
+
+
+/**
+ *	侧边栏
+ */
+.main-sidebar, .main-sidebar::before{
+	width: $sidebar_w;
+	background-color: $sidebar_bg;
+	color: $sidebar_color;
+
+	&:hover{
+		.brand-link{
+			width: $sidebar_w !important;
+		}
+	}
+}
+.sidebar a{
+	color: $sidebar_color;
+}
+// 侧边栏左上角logo
+.brand-link{
+	// padding: 1.1rem .5rem;
+	background-color: $sidebar_bg;
+}
+.layout-navbar-fixed .wrapper .brand-link{
+	width: $sidebar_w;
+	color: $sidebar_color;
+	border-bottom: none;
+	max-width: $sidebar_w;
+}
+
+
+
+
+/**
+ *	脚部
+ */
+ .layout-footer-fixed .wrapper .main-footer.text-sm{
+	padding: .8rem 2rem;
+	background: #f8f8f8;
+	border-top: none;
+	font-size: rem(12);
+}
+
+
+
+// 媒体查询
+@media (min-width: 768px){
+	body:not(.sidebar-mini-md) .content-wrapper, 
+	body:not(.sidebar-mini-md) .main-footer, 
+	body:not(.sidebar-mini-md) .main-header{
+		margin-left: $sidebar_w;
+	}
+}

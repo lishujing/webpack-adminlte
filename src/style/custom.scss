@@ -6,9 +6,16 @@
  * Description: Define custom style for system level.
  */
 
-html{
+ html,body{
 	font-size: 14px;
+	font-family: PingFang SC, -apple-system, Arial, Microsoft YaHei, Microsoft JhengHei, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+@import "./variable.scss";
+@import "./adminlte.scss";
+@import "./general.scss";
 
 @function rem($px){
 	@return $px /16 * 1rem;
@@ -34,46 +41,6 @@ input {
 	// transition: background-color 100ms;
 }
 
-.layout-footer-fixed .wrapper .content-wrapper {
-	padding-bottom: calc(3.5rem + 1px);
-}
-
-.layout-navbar-fixed .wrapper .content-wrapper {
-	overflow: hidden !important;
-}
-
-@media (max-width: 991.98px) {
-	body:not(.sidebar-mini-md) .wrapper .content-header {
-		.container-fluid .mb-2 {
-			margin-bottom: 0 !important;
-		}
-	}
-	body:not(.sidebar-mini-md) .wrapper .content {
-		margin-top: 65px;
-	}
-}
-@media (max-width: 600px) {
-	body:not(.sidebar-mini-md) .wrapper .content-header .breadcrumb {
-		padding: 0 0;
-	}
-	.wrapper .content-header h1{
-		line-height: 1.2 !important;
-	}
-}
-
-.content {
-	width: 100%;
-	height: calc(100vh - 11rem - 5px);
-	overflow-y: scroll;
-	overflow-x: hidden;
-	margin-top: 50px;
-	z-index: 0;
-}
-.content-wrapper {
-	position: relative;
-}
-
-
 
 .rotateBarIcon {
 	transition: 200ms;
@@ -92,67 +59,91 @@ input {
 	display: none;
 	position: absolute;
 }
-// 锁屏密码错误提示
-.lock-error {
-	transform: translateY(-30px);
-	padding: 5px 135px;
-	margin-bottom: -15px;
-	color: rgb(252, 23, 23);
-	font-size: 0.7rem;
-	user-select: none;
-	letter-spacing: 0.5px;
-	display: none;
-	position: absolute;
-	// text-align: center;
-}
 // 改变登录注册input布局
 .login-box .input-group,
 .register-box .input-group {
 	margin-bottom: 1.3rem !important;
 }
 
+// 导航栏上方的提示铃
+.far.fa-bell{
+	font-size: 16px;
+}
+.badge{
+	// padding: 2px;
+	border-radius: 50%;
+	font-size: inherit;
+	top: .15rem;
+	background-color: rgb(214, 0, 0);
+	color: #fff;
+	padding: 1px;
+}
+
+
 // datatable
+.table{
+	border: 0;
+}
+.table thead th {
+	background: #f5f5f5;
+	font-size: rem(16);
+	color: #333;
+}
+table tbody tr{
+	td{
+		font-size: rem(14);
+		color: #333;
+	}
+}
+table tbody tr:nth-child(even){
+	background: #FCFCFC;
+}
+table.table-bordered.dataTable th, table.table-bordered.dataTable td{
+	border: none;
+}
+table.table-bordered.dataTable{
+	border-right-width: 1px;
+}
 div.dataTables_info {
 	padding: 0 0.4rem !important;
 	max-width: 200px;
 	float: left;
 	line-height: 38px;
 }
-@media screen and (max-width: 767px) {
-	.dataTables_paginate {
-		text-align: right !important;
-		ul.pagination {
-			justify-content: end !important;
-		}
-	}
-	div.dataTables_wrapper div.dataTables_info {
-		float: none;
-		display: block;
-		max-width: 100% !important;
-	}
-	.card.table {
-		padding: 0px !important;
-	}
+.datatable-flex{
+	display: flex;
+	justify-content: flex-end;
 }
 .card.table {
-	padding: 5px 20px;
+	padding: 5px;
 }
 .table td,
 .table th {
 	vertical-align: middle;
 	text-align: center;
 }
-.page-item.disabled {
-	cursor: not-allowed !important;
-}
-// 操作列手势
-.table-opera{
+// table操作列手势
+.table-opera {
 	cursor: pointer;
-	&:hover{
+	&:hover {
 		text-decoration: underline;
 	}
 }
-
+// datatable下方分页按钮
+.page-item{
+	&.active .page-link{
+		color: $theme_bgColor;
+		background-color: #fff;
+	}
+	.page-link{
+		color: #666;
+		background-color: #fff;
+		border: none;
+		&:focus{
+			box-shadow: none;
+		}
+	}
+}
 
 // datatable头部下载用的dt-button
 button.dt-button,
@@ -172,6 +163,8 @@ a.dt-button {
 		border-color: #dee2e6 !important;
 	}
 }
+
+
 
 // nprogress顶部进度条
 #nprogress .bar {
@@ -239,23 +232,6 @@ a.dt-button {
 	z-index: -1;
 }
 
-// 面包屑
-.wrapper .content-header {
-	position: absolute;
-	width: 100%;
-	top: 0px;
-	z-index: 999;
-	padding: 0 0.5rem;
-	box-shadow: 0 1px 16px rgba(212, 212, 212, 0.25), 0 1px 5px rgba(46, 45, 45, 0.22) !important;
-	.mb-2 {
-		margin-bottom: 0 !important;
-	}
-}
-.content-header .breadcrumb {
-	height: 100%;
-	vertical-align: middle;
-	padding: calc(1 / 2 * (34px - 20px)) 0;
-}
 .wrapper .content-header .container-fluid{
 	animation: showbread 300ms;
 }

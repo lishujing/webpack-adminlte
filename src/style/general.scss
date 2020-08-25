@@ -1,0 +1,87 @@
+
+ @function rem($px){
+	@return $px / 16 * 1rem;
+}
+
+
+// 手势
+.ban-cursor{
+	cursor: no-drop;
+	user-select: none;
+	color: #999;
+}
+.pointer-cursor{
+	cursor: pointer;
+}
+
+
+// 文字
+.text-white{
+	color: #fff;
+}
+.text-danger{
+	color: #FE8181;
+}
+.text-theme{
+	color: #FFAA11;
+}
+.text-bold{
+	font-weight: 600;
+}
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center;
+}
+
+// margin
+.marginr{
+	margin-right: 10px;
+}
+.margint{
+	margin-top: 20px;
+}
+.marginl{
+	margin-left: 10px;
+}
+
+
+// input
+.default-input{
+	width: 130px;
+	border-width: 0;
+}
+
+
+// 浮动
+.float-l{
+	float: left;
+}
+
+
+// 背景
+.bg-gray-light{
+	background-color: #F8F8F8;
+}
+
+
+// 边框
+.no-border{
+	border-width: 0;
+}
+
+
+// 模态框button
+.btn-modal{
+	padding: .12rem 1.2rem;
+	font-size: rem(14);
+}
+.btn-default{
+	border: 1px solid #e5e5e5;
+	background: #f8f8f8;
+	color: #333;
+}

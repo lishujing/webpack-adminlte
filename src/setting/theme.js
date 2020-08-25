@@ -91,6 +91,9 @@ export default class theme {
 				border: 0!important;
 				color: #343a40;
 			}
+			.layout-footer-fixed .wrapper .content-wrapper{
+				background-color: #343a40;
+			}
 
 
 			/*datatables下载button*/
@@ -171,7 +174,6 @@ export default class theme {
 				box-shadow: 0 0 28px rgba(0,0,0,.25),0 0 10px rgba(0,0,0,.22)!important;
 			}
 			.wrapper .content-header{
-				box-shadow: 0 2px 18px rgba(0,0,0,.25),0 2px 5px rgba(0,0,0,.22)!important;
 				/* border-bottom: 1px solid #515457; */
 			}
 
@@ -195,6 +197,18 @@ export default class theme {
 			.modal.fade,.modal-dialog{
 				background-color: transparent !important;
 			}
+
+			.wrapper .content-header{
+				background-color: #343a40;
+			}
+
+			.main-sidebar,
+			.brand-link{
+				background-color: #343a40;
+			}
+			.brand-link{
+				color: #fff !important;
+			}
 		`
 
 		this.lightStyle = `
@@ -205,7 +219,7 @@ export default class theme {
 				background: rgba(0, 0, 0, .4) !important;
 			}
 			.wrapper .content-header{
-				background-color: #fff;
+				background-color: #f8f8f8;
 			}
 
 
