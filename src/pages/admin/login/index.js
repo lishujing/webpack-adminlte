@@ -10,7 +10,7 @@ import "@/setting/index"
 import "@/assets/style/loginregister.scss"
 import authorizeAPI from "@/api/authAction"
 import { getAuthCodeCookie, refreshAuthCode } from "@/util/authcode"
-import Notice from "@/util/message"
+import Notice from "@/components/message/message"
 import Validate from "@/config/validateinput"
 
 const valid = new Validate([

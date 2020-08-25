@@ -9,8 +9,8 @@
 import "@/setting"
 import "@/util/getMenu"
 import tableAction from "@/api/datatableAction"
-import dataTable from "@/util/datatable"
-import Notice from "@/util/message"
+import dataTable from "@/components/datatable/datatable"
+import Notice from "@/components/message/message"
 
 new dataTable("example1", {
 	dom: "Bfrtip",
@@ -148,15 +148,8 @@ const table2 = new dataTable("example2", {
 
 tableAction.table2().then(res => {
 	table2.rows.add(res.data).draw()
-	Notice.toast({
-		heading: "消息提示",
-		text: res.success,
-	})
+	Notice.success(res.success)
 })
 
-
-
-var data2 = table2.rows([".selected"]).data()[0]
-console.log(data2)
 
 

@@ -3,14 +3,104 @@
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- base style -->
-<link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
-<link rel="stylesheet" href="/vendor/ionicons/css/ionicons.min.css">
-<link rel="stylesheet" href="/vendor/overlayscrollbars/OverlayScrollbars.min.css">
+<link rel="stylesheet" href="/static/admin/vendor/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="/static/admin/vendor/ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="/static/admin/vendor/overlayscrollbars/OverlayScrollbars.min.css">
 <!-- adminlte theme -->
-<link rel="stylesheet" href="/vendor/adminlte/css/adminlte.min.css">
+<link rel="stylesheet" href="/static/admin/vendor/adminlte/css/adminlte.min.css">
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
 <!-- [if lt IE 9]>
 	<script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
 <![endif] -->
+
+
+
+<!-- loading -->
+<style>
+	#Loading {
+		position: fixed;
+		background-color: #212133;
+		opacity: .97;
+		z-index: 999999999;
+		user-select: none;
+		overflow: hidden;
+		text-align: center;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		right: 0;
+		bottom: 0;
+    display: flex;         
+		align-items: center;
+		justify-content: center;
+	}
+
+	#Loading .wrapper {
+    display: flex;          
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	@-webkit-keyframes ball-beat {
+		50% {
+			opacity: 0.2;
+			-webkit-transform: scale(0.75);
+			transform: scale(0.75);
+		}
+
+		100% {
+			opacity: 1;
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+	}
+
+	@keyframes ball-beat {
+		50% {
+			opacity: 0.2;
+			-webkit-transform: scale(0.75);
+			transform: scale(0.75);
+		}
+
+		100% {
+			opacity: 1;
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+	}
+	#Loading .wrapper .title{
+		width: 100%;
+		text-align: center;
+		color: rgb(31, 87, 241);
+		letter-spacing: 0.2px;
+		font-weight: 700;
+		font-size: 10px;
+	}
+
+	.ball-beat > div {
+		background-color: rgb(32, 70, 241);
+		width: 18px;
+		height: 18px;
+		border-radius: 100%;
+		margin: 2px;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+		display: inline-block;
+		-webkit-animation: ball-beat 0.7s 0s infinite linear;
+		animation: ball-beat 0.7s 0s infinite linear;
+	}
+	.ball-beat > div:nth-child(2n-1) {
+		-webkit-animation-delay: 0.35s !important;
+		animation-delay: 0.35s !important;
+	}
+
+	@media screen and (max-width: 500px) {
+		.ball-beat > div{
+			width: 20px;
+			height: 20px;
+		}
+	}
+</style>

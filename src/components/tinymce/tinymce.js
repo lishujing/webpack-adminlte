@@ -8,7 +8,7 @@
 
 class tinymceConfig {
 	systemConfig = {
-		baseURL: "/vendor/tinymce",
+		baseURL: "/static/admin/vendor/tinymce",
 		suffix: ""
 	}
 

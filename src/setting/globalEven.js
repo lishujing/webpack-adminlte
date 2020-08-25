@@ -6,8 +6,16 @@
  * Description  : 全局公共的事件
  */ 
 
-$("#logout").on("click", e => {
-	localStorage.isLogin = false
-	localStorage.removeItem("userInfo")
-	location.href = "/admin/login"
-})
+//  退出
+export function logout() {
+	$("#logout").on("click", e => {
+		location.href = "/admin/login"
+	})
+}
+
+
+// 加载完毕
+export function loadingEnd(){
+	let loadingDom = document.getElementById("Loading")
+	loadingDom ? document.body.removeChild(document.getElementById("Loading")) : ""
+}

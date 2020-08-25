@@ -10,33 +10,16 @@ import "@/setting/index"
 import "@/util/getMenu"
 
 import articleAction from "@/api/articleAction"
-import Notice from "@/util/message"
-// import hljs from "highlight.js"
-// import "highlight.js/styles/railscasts.css"
-// import Prism from "prismjs"
-// import "prismjs/themes/prism.css"
+import Notice from "@/components/message/message"
 
 articleAction.getArticle()
 	.then(async res => {
 		if(res.code == 200){
-			Notice.toast({
-				icon: "success",
-				heading: "消息提示",
-				text: res.success
-			})
-			// const code = await Prism.highlight(res.data, Prism.languages.javascript, "javascript")
+			Notice.success(res.success)
 			$("#editor").html(res.data)
 		}else{
-			Notice.toast({
-				icon: "error",
-				heading: "错误提示",
-				text: res.error
-			})
+			Notice.error(res.error)
 		}
 	}).catch(error => {
-		Notice.toast({
-			icon: "error",
-			heading: "错误提示",
-			text: error
-		})
+		Notice.error(error)
 	})

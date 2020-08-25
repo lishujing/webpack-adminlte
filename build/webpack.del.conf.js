@@ -15,7 +15,7 @@ const Log = console.log
 glob.sync(path.resolve(__dirname, "../dist") + "/*").forEach(filePath => {
   const curPath = filePath.slice(filePath.lastIndexOf("/"))
   if(curPath == "/dist") return
-  if(curPath == "/vendor") return
+  if(curPath == "/static") return
   if(curPath == "/manifest") return
   if(curPath == "/dll") return
 

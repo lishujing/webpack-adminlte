@@ -6,16 +6,16 @@
  * Description  : adminlte config
  */
 
-import BackTop from "@/util/backtop"  // backtop plugin
+import BackTop from "@/components/backtop/backtop"  // backtop plugin
 import NProgress from "nprogress"
 import "nprogress/nprogress.css"
 import "@/setting/themeToggle"  // toggle theme
 import "@/setting/activeLink"   // tag sidebar link
 import "@/setting/fullscreen"   // fullscreen
 import "@/setting/sidebar"  // control sidebar
-import "@/setting/globalEven"  // 全局事件
 import "@/setting/custom.scss"  // custom style(system level)
 import "@/setting/breadcrumb"
+import { logout, loadingEnd } from "@/setting/globalEven"  // 全局事件
 
 // 设置返回顶部button
 new BackTop({
@@ -42,4 +42,10 @@ $(function () {
 
 // 顶部进度条
 NProgress.start()
-window.onload = () => NProgress.done()
+window.onload = () => {
+	NProgress.done()
+
+	logout()
+
+	loadingEnd()
+}

@@ -8,9 +8,9 @@
 
 import "@/setting/index"
 import "@/util/getMenu"
-import Notice from "@/util/message"
+import Notice from "@/components/message/message"
 
-import DatePicker from "@/util/date"
+import DatePicker from "@/components/date/date"
 
 let start, end
 
@@ -34,17 +34,9 @@ DatePicker.init("#test", {shortcut: false})
 
 $("#query").on("click", e => {
 	if(!start){
-		Notice.toast({
-			icon: "warning",
-			heading: "警告提示",
-			text: "请选择开始日期"
-		})
+		Notice.warning("请选择开始日期")
 	}else if(!end){
-		Notice.toast({
-			icon: "warning",
-			heading: "警告提示",
-			text: "请选择结束日期"
-		})
+		Notice.warning("请选择结束日期")
 	}else{
 		const startTime = new Date(start),
 					endTime = new Date(end)

@@ -7,6 +7,9 @@
 </head>
 
 <body class="control-sidebar-slide sidebar-mini hold-transition layout-fixed layout-navbar-fixed layout-footer-fixed">
+	<!-- loading -->
+	<%= require('html-loader!@/layout/common/loading.html') %>
+
 	<div class="wrapper">
 		<!-- 顶部导航栏 -->
 		<%= require('html-loader!@/layout/common/nav.html') %>
@@ -364,7 +367,7 @@
 		<%= require('html-loader!@/layout/common/baseScript.html') %>
 
 		<!-- plugin -->
-		<script src="/vendor/chartjs/Chart.js"></script>
+		<script src="/static/admin/vendor/chartjs/Chart.js"></script>
 
 
 

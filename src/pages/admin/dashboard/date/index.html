@@ -7,11 +7,14 @@
 	<!-- 基本head -->
 	<%= require('html-loader!@/layout/common/baseheader.html') %>
 	<!-- 日历 -->
-	<link rel="stylesheet" href="/vendor/jedate/jedate.css">
+	<link rel="stylesheet" href="/static/admin/vendor/jedate/jedate.css">
 
 </head>
 
 <body class="control-sidebar-slide sidebar-mini hold-transition layout-fixed layout-navbar-fixed layout-footer-fixed">
+	<!-- loading -->
+	<%= require('html-loader!@/layout/common/loading.html') %>
+
 	<div class="wrapper">
 
 		<!-- 顶部导航栏 -->
@@ -53,7 +56,7 @@
 
 		<!-- plugins -->
 		<!-- 日历 -->
-		<script src="/vendor/jedate/jedate.js"></script>
+		<script src="/static/admin/vendor/jedate/jedate.js"></script>
 
 
 </body>

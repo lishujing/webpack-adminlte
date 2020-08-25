@@ -9,12 +9,11 @@
 import "@/setting/index"
 import "@/util/getMenu"
 import "./index.scss"
-
-import Notice from "@/util/message"
+import Notice from "@/components/message/message"
 import articleAction from "@/api/articleAction"
+import TinyMce from "@/components/tinymce/tinymce"
 
-// 引入tinymce
-import TinyMce from "@/util/tinymce"
+
 TinyMce.init(tinymce, "#mytextarea", {
 	// 保存内容
 	save_onsavecallback: function (e) {
@@ -22,27 +21,13 @@ TinyMce.init(tinymce, "#mytextarea", {
 		articleAction.createArticle({ content })
 			.then(res => {
 				if (res.code == 200) {
-					Notice.toast({
-						icon: "success",
-						heading: "消息提示",
-						text: res.success,
-						duration: 1000
-					})
+					Notice.success(res.success)
 				} else {
-					Notice.toast({
-						icon: "error",
-						heading: "错误提示",
-						text: res.error,
-						duration: 1200
-					})
+					Notice.error(res.error)
 				}
 
 			}).catch(error => {
-				Notice.toast({
-					icon: "error",
-					heading: "错误提示",
-					text: error
-				})
+				Notice.error(error)
 			})
 	},
 	// 上传文件、图片、多媒体

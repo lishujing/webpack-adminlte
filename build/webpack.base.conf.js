@@ -41,20 +41,7 @@ module.exports = {
 			},
 			{
 				test: /\.js$/,
-				use: [
-					{
-						loader: "babel-loader?cacheDirectory=true",
-						options: {
-							presets: ["@babel/preset-env"],
-							plugins: [
-								"babel-plugin-transform-eval",
-								["@babel/plugin-proposal-decorators", { legacy: true }],
-								["@babel/plugin-proposal-class-properties", { loose: true }],
-								"@babel/plugin-transform-runtime"
-							]
-						},
-					}
-				],
+				loader: "babel-loader?cacheDirectory=true",
 				exclude: /node_modules/,
 				include: config.resolve("../src")
 			},
@@ -70,7 +57,7 @@ module.exports = {
 		...config.htmlPluginArr,
 		new VueLoaderPlugin(),
 		new CleanWebpackPlugin({
-			cleanOnceBeforeBuildPatterns: ["**/*", "!vendor", "!vendor/**", "!manifest", "!manifest/**", "!dll", "!dll/**"],
+			cleanOnceBeforeBuildPatterns: ["**/*", "!static", "!static/**", "!manifest", "!manifest/**", "!dll", "!dll/**"],
 			cleanStaleWebpackAssets: true
 		}),
 		new webpack.ProvidePlugin({
